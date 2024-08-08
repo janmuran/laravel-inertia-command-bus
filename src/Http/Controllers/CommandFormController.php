@@ -29,10 +29,10 @@ final class CommandFormController
         /** @var string|null $command */
         $command = $request->input('command');
         if ($command === null) {
-            return back()->withError('Neznama akcia, doplnte command');
+            return back()->withError('Unknown command');
         }
 
-        /** @var class-string<\App\Service\Tools\Command\FormCommand> $commandName */
+        /** @var class-string<FormCommand> $commandName */
         $commandName = $this->commandStorage->getCommandClass($command);
         $requestClass = $commandName::getRequestType();
         if ($requestClass !== null) {
