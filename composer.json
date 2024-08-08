@@ -1,0 +1,56 @@
+{
+  "name": "janmuran/laravel-inertia-command-bus",
+  "description": "Laravel inertia command bus",
+  "keywords": [
+    "command-bus",
+    "laravel"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/janmuran/laravel-inertia-command-bus",
+  "authors": [
+    {
+      "name": "Jan Muran",
+      "email": "muran@muran.at",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "ext-json": "*",
+    "janmuran/laravel-command-bus": "^1.0"
+  },
+  "require-dev": {
+    "mockery/mockery": "^1.4",
+    "friendsofphp/php-cs-fixer": "^3.53",
+    "phpstan/phpstan": "^1.10",
+    "phpmd/phpmd": "^2.15",
+    "phpro/grumphp": "^2.5",
+    "squizlabs/php_codesniffer": "^3.10",
+    "phpunit/phpunit": "^11.1",
+    "orchestra/testbench": "~3.0|^8.0|^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Janmuran\\LaravelInertiaCommandBus\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Janmuran\\LaravelCommandBus\\Tests\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Janmuran\\LaravelInertiaCommandBus\\CommandBusServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "phpro/grumphp": true
+    }
+  }
+}
