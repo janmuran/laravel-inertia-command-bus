@@ -1,6 +1,6 @@
 ## Laravel inertia command bus
 
-Simple command bus for laravel inertia. Use jms serializer for build command.
+Simple command bus for laravel inertia with custom toast response
 
 ### Install
 
