@@ -33,6 +33,6 @@ class CommandBusServiceProvider extends ServiceProvider
     {
         // @phpstan-ignore-next-line
         Route::post("command/form/run", '\\' . CommandFormController::class)
-            ->name('commmand-bus-form-run-command'); // @phpstan-ignore-line
+            ->name('commmand-bus-form-run-command')->middleware('web'); // @phpstan-ignore-line
     }
 }
