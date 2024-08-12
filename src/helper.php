@@ -25,3 +25,25 @@ if (!function_exists('toast')) {
         return null;
     }
 }
+
+
+if (!function_exists('toastSuccess')) {
+    function toastSuccess(string $message): RedirectResponse|null
+    {
+        return toast(ToastType::SUCCESS, $message);
+    }
+}
+
+if (!function_exists('toastWarning')) {
+    function toastWarning(string $message): RedirectResponse|null
+    {
+        return toast(ToastType::WARNING, $message);
+    }
+}
+
+if (!function_exists('toastError')) {
+    function toastError(string $message): RedirectResponse|null
+    {
+        return toast(ToastType::ERROR, $message);
+    }
+}
