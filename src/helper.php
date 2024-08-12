@@ -4,14 +4,15 @@ declare(strict_types=1);
 
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Str;
+use Janmuran\LaravelInertiaCommandBus\Enums\ToastType;
 
 if (!function_exists('toast')) {
-    function toast(string $type, string $message, RedirectResponse|null $response = null): RedirectResponse|null
+    function toast(ToastType $type, string $message, RedirectResponse|null $response = null): RedirectResponse|null
     {
         $toasts = session()->get('toasts', []);
         $toasts[] = [
             'id' => Str::uuid(),
-            'type' => $type,
+            'type' => $type->value,
             'message' => $message,
         ];
 

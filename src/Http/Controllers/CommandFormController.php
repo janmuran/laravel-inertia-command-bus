@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Janmuran\LaravelInertiaCommandBus\Http\Controllers;
 
-use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Request;
 use Janmuran\LaravelCommandBus\CommandBusInterface;
 use Janmuran\LaravelCommandBus\CommandStorageInterface;
